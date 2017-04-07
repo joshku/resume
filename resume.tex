@@ -1,0 +1,119 @@
+%!TEX TS-program = xelatex
+\documentclass[]{friggeri-cv}
+\usepackage{afterpage}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
+\hypersetup{
+    pdftitle={Josh Ku - Resume},
+    pdfauthor={Joshua Ku},
+    pdfsubject={Josh Ku - Resume},
+    pdfkeywords={resume josh joshua ku ibm software engineer},
+    colorlinks=false,       % no lik border color
+   allbordercolors=white    % white border color for all
+}
+\RequirePackage{xcolor}
+\definecolor{pblue}{HTML}{0395DE}
+
+\begin{document}
+\header{Joshua}{Ku}
+      {Sofware Engineer}
+
+% Fake text to add separator
+\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
+.....
+}}
+
+% In the aside, each new line forces a line break
+\begin{aside}
+  \section{Address}
+    4407 Hopson Road Apt 8204
+    Morrisville, NC, USA 27560
+    ~
+    1688 W. 62nd Ave.
+    Vancouver, BC, Canada V6P 2G2
+    ~
+  \section{Telephone}
+    +1 267 699 6250
+    ~
+  \section{Email}
+    \href{mailto:joshua.ku@outlook.com}{\textbf{joshua.ku@}outlook.com}
+    ~
+  \section{Git}
+    \href{https://github.com/joshku}{github.com/joshku}
+    ~
+  \section{LinkedIn}
+    \href{https://www.linkedin.com/in/joshua-ku-ab323349/}{linkedin.com/in/joshua-ku-ab323349}
+    ~
+  \section{Languages}
+    \textbf{C/C++}\includegraphics[scale=0.40]{img/5stars.png}
+    \textbf{C\#}\includegraphics[scale=0.40]{img/4stars.png}
+    \textbf{Python}\includegraphics[scale=0.40]{img/4stars.png}
+    \textbf{Bash}\includegraphics[scale=0.40]{img/4stars.png}
+    \textbf{Java}\includegraphics[scale=0.40]{img/4stars.png}
+    ~
+    \textbf{English}\includegraphics[scale=0.40]{img/5stars.png}
+    \textbf{Cantonese}\includegraphics[scale=0.40]{img/4stars.png}
+    \textbf{Mandarin}\includegraphics[scale=0.40]{img/3stars.png}
+    ~
+  \section{Operating Systems}
+    \textbf{GNU/Linux}\includegraphics[scale=0.40]{img/4stars.png}
+    \textbf{MacOS}\includegraphics[scale=0.40]{img/4stars.png}
+    \textbf{Windows}\includegraphics[scale=0.40]{img/4stars.png}
+    \textbf{iOS}\includegraphics[scale=0.40]{img/3stars.png}
+    \textbf{Android}\includegraphics[scale=0.40]{img/3stars.png}
+    ~
+  \section{Framework & Skills}
+    \textbf{Artifactory, Docker, Jenkins, UrbanCode Deploy, Elasticsearch, Kibana, Logstash,
+    Gerrit, Vyatta vRouter, Wireshark, Citrix Netscaler, NGINX, Ansible, HP ITSM, RedPrairie WMS,
+    MS Office, MS SharePoint, SAP R3, ScaleIO, Eclipse, MS Visual Studio, Qt, Agile, Scrum. DevOps}
+\end{aside}
+
+\section{Summary}
+  {I am an experienced software engineer with a focus on back-end programming. Skilled in learning new
+  technologies and working under pressure. Has strong communication skills and is very good at
+  debugging issues. Highly experienced in network administration, database administration and server
+  administration.\\}
+
+\section{Education}
+\begin{entrylist}
+  \entry
+    {2010 - 2015}
+    {Bachelor's Degree in Computer Science and Information Sciences and Technology}
+    {\\The Pennsylvania State University, State College, PA\\}
+    {\emph{GPA} 3.38\\
+    \emph{Dean's List} Sprint 2011, Spring 2014\\}
+
+\end{entrylist}
+
+\section{Experience}
+\begin{entrylist}
+  \entry
+    {09/15 - \\Present}
+    {Software Engineer}
+    {\\IBM, Durham, NC}
+    {Supported applications such as Jenkins, Artifactory and UrbanCode as \\cloud services\\
+    Designed a highly available network architecture to support cloud based \\tooling\\
+    Assisted teams in debugging network related problems\\
+    Managed VPN tunnels with external customer datacenter environments\\
+    Managed vendor relationships with MySQL\\
+    Led developer workshops to teach programmers how to develop code \\with the DevOps mentality\\
+    Provided 24 x 7 support for global DevOps movement\\}
+  \entry
+    {05/14 - 08/14}
+    {Orion Assembly IT Intern – Mobile Applications / SharePoint Developer}
+    {\\General Motors Company, Lake Orion, MI}
+    {Developed an Android application in Java to assist with torque tool auditing\\
+    Worked with various teams across the plant to assist in document control processes\\
+    Created and maintained a SharePoint site for all plant personnel to use\\}
+  \entry
+    {02/14 - 04/14}
+    {EMC - ScaleIO Project Manager}
+    {\\The Pennsylvania State University, State College, PA}
+    {Developed a management GUI for a ScaleIO environment as a browser application using WPF and C#\\
+    Consulted with ScaleIO users to understand the environments and processes\\
+    Investigated how software defined storage can impact data centers\\}
+
+\end{entrylist}
+
+\end{document}
