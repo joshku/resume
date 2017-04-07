@@ -205,7 +205,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large\headingfont\color{pblue} ##1}
   }
-  \begin{textblock}{4.6}(1.0, 0.55)
+  \begin{textblock}{4.6}(1.0, 0.35)
   \begin{flushright}
   \obeycr
 }{%
