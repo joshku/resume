@@ -1,120 +1,123 @@
-%!TEX TS-program = xelatex
-\documentclass[]{friggeri-cv}
-\usepackage{afterpage}
-\usepackage{hyperref}
-\usepackage{color}
-\usepackage{xcolor}
-\hypersetup{
-    pdftitle={Josh Ku - Resume},
-    pdfauthor={Joshua Ku},
-    pdfsubject={Josh Ku - Resume},
-    pdfkeywords={resume josh joshua ku ibm software engineer},
-    colorlinks=false,       % no lik border color
-   allbordercolors=white    % white border color for all
-}
-\RequirePackage{xcolor}
-\definecolor{pblue}{HTML}{0395DE}
+\documentclass[]{resume-openfont}
 
+\pagestyle{fancy}
+\resetHeaderAndFooter
+
+%--------------------------------------------------------------
+% Convenience command - make it easy to fill template
+
+% Create job position command. Parameters: company, position, location, when
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\\\descript{ #2}\hfill\location{#3 | #4}\fakeNewLine}
+
+% Create education heading. Parameters: Name, degree, location, when
+\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
+\descript{#2}\fakeNewLine}
+
+% Create project heading. Parameters: Name, link, Tech stack
+\newcommand{\activityHeadingWithDate}[2]{\runsubsection{#1}\hfill{#2}\fakeNewLine}
+
+% Parameters: courses
+\newcommand{\courseWork}[1]{\textbf{Coursework:} #1}
+
+% Parameters: 
+\newcommand{\achievements}[2]{\textbf{#1} #2\\}
+ 
+% Parameters: Category, list
+\newcommand{\skills}[2]{\textbf{#1} #2\\}
+%--------------------------------------------------------------
 \begin{document}
-\header{Joshua}{Ku}
-      {Sofware Engineer}
 
-% Fake text to add separator
-\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
-.....
-}}
+%--------------------------------------------------------------
+%     Profile
+%--------------------------------------------------------------
+\newcommand{\yourName}{Joshua Ku}
+% How you want it to show up on the resume
+\newcommand{\yourWebsite}{joshuaku.com}
+% vs how you want it to show up. If it's you can just replace "\yourWebsiteLink" with "yourWebsite"
+\newcommand{\yourWebsiteLink}{https://joshuaku.com}
+\newcommand{\yourEmail}{joshua.ku@outlook.com}
+\newcommand{\yourPhone}{+1-604-916-2528 }
+\newcommand{\githubUserName}{joshku}
+\newcommand{\linkedInUserName}{joshua-ku-ab323349}
 
-% In the aside, each new line forces a line break
-\begin{aside}
-  \section{Address}
-    Current:
-    4407 Hopson Road Apt 8204
-    Morrisville, NC, USA 27560
-    ~
-    Home:
-    1688 W. 62nd Ave.
-    Vancouver, BC, Canada V6P 2G2
-    ~
-  \section{Telephone}
-    +1 267 699 6250
-    ~
-  \section{Email}
-    \href{mailto:joshua.ku@outlook.com}{\textbf{joshua.ku@}outlook.com}
-    ~
-  \section{Git}
-    \href{https://github.com/joshku}{github.com/joshku}
-    ~
-  \section{LinkedIn}
-    \href{https://www.linkedin.com/in/joshua-ku-ab323349/}{linkedin.com/in/joshua-ku-ab323349}
-    ~
-  \section{Languages}
-    \textbf{Python}\includegraphics[scale=0.40]{img/5stars.png}
-    \textbf{Bash}\includegraphics[scale=0.40]{img/4stars.png}
-    \textbf{C/C++}\includegraphics[scale=0.40]{img/4stars.png}
-    \textbf{C\#}\includegraphics[scale=0.40]{img/4stars.png}
-    \textbf{Java}\includegraphics[scale=0.40]{img/3stars.png}
-    ~
-    \textbf{English}\includegraphics[scale=0.40]{img/5stars.png}
-    \textbf{Cantonese}\includegraphics[scale=0.40]{img/4stars.png}
-    \textbf{Mandarin}\includegraphics[scale=0.40]{img/3stars.png}
-    ~
-  \section{Operating Systems}
-    \textbf{Ubuntu}\includegraphics[scale=0.40]{img/5stars.png}
-    \textbf{MacOS}\includegraphics[scale=0.40]{img/4stars.png}
-    \textbf{CentOS/RHEL}\includegraphics[scale=0.40]{img/4stars.png}
-    \textbf{Windows}\includegraphics[scale=0.40]{img/4stars.png}
-    ~
-  \section{Framework \& Skills}
-    \textbf{Docker, LinuxKit, Helm, Kubernetes, Kustomize, Skaffold, GitHub, TravisCI, ZenHub, Slack, Artifactory, IBM Cloud, Google Cloud, Ansible, Jenkins, Kibana, UrbanCode Deploy, Vyatta, ChatOps, Elasticsearch, Logstash, Netscaler, Nginx, Agile, DevOps, SRE}
-\end{aside}
+\begin{center}
+    \Huge \scshape \latoRegular{\yourName} \\ \vspace{1pt}
+    \small \href{mailto:\yourEmail}{\underline{\yourEmail}}  $|$  \yourPhone  $|$ 
+    \href{https://www.linkedin.com/in/\linkedInUserName}{\underline{linkedIn/\linkedInUserName}} $|$
+    \href{https://github.com/\githubUserName}{\underline{github.com/\githubUserName}} 
+    % $|$ \href{\yourWebsiteLink}{\underline{\yourWebsite}}
+\end{center}
 
-%\section{Summary}
-%  {I am an experienced software engineer with a focus on back-end programming. Skilled in learning new
-%  technologies and working under pressure. I have strong communication skills and am very good at
-%  debugging issues. Highly experienced in network administration, database administration and server
-%  administration.\\}
+%--------------------------------------------------------------
+%     Experience
+%--------------------------------------------------------------
+\section{Work Experience}
+\resumeHeading{IBM}{Advisory Software Engineer}{Durham, NC}{July 2017 - July 2021}
+\begin{bullets}
+    \item Collaborated with GitHub and TravisCI enterprise support teams to investigate software issues
+    \item Hosted and maintained a highly available resilient environment at scale
+    \item Developed automation to manage all infrastructure components
+    \item Performed large scale data migration between cloud providers
+    \item Conducted a pilot offering of Semmle
+    \item Designed and lead the strategy for the migration of data from IBM GitHub Enterprise to Kyndryl GitHub Enterprise
+    \item Assisted the ZenHub and Jira SRE squads in debugging performance related issues
+\end{bullets}
+\sectionsep
 
+\resumeHeading{IBM}{Software Engineer}{Durham, NC}{September 2015 - July 2017}
+\begin{bullets}
+    \item Hosted applications such as Jenkins, Artifactory and UrbanCode as cloud services
+    \item Designed and implemented a highly available network architecture to support cloud based tooling
+    \item Developed automation to maintain network configurations on various routers
+    \item Organized developer workshops to teach programmers how to develop code with the DevOps mentality
+\end{bullets}
+\sectionsep
+
+\resumeHeading{General Motors Company}{Mobile Applications / SharePoint Intern}{Lake Orion, MI}{May 2014 - August 2014}
+\begin{bullets}
+    \item Collaborated with plant management to develop a proof of concept android application written in Java to help audit tools more efficiently
+    \item Developed MySQL queries to create views for management to read tool data and forecast trends
+    \item Collaborated with various teams across the plant to identify current document control processes and how they can be improved
+    \item Redesigned the internal SharePoint site to be more user friendly and intuitive for all plant personnel
+\end{bullets}
+\sectionsep
+
+%--------------------------------------------------------------
+%     Activities
+%--------------------------------------------------------------
+\section{Activities} 
+
+\activityHeadingWithDate{IBM JumpStart Instructor}{January 2018 - July 2021}
+\begin{bullets}
+    \item Facilitated coding workshops to teach new hires about agile development and design thinking
+    \item Taught workshops at various IBM developer sites in USA and Canada
+\end{bullets}
+\sectionsep
+
+\activityHeadingWithDate{IBM Developer Buddy}{January 2019 - July 2021}
+\begin{bullets}
+    \item Mentored developers who recently onboarded to IBM
+    \item Organized local social events to introduce new hires to the local IBM community
+\end{bullets}
+\sectionsep
+
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+\section{Skills}
+\skills{Languages:}{Python, Shell, Go, Ruby, YAML, SQL, C/C++, C\#, Java}
+\skills{Operating Systems:}{Ubuntu, MacOS, CentOS/RHEL, Debian, Alpine, Windows}
+\skills{Technologies:}{AWS, GCP, IBM Cloud, Kubernetes, LinuxKit, Docker, Helm, Kustomize, Skaffold, NGINX, Apache, GitHub, TravisCI, JenkinsCI, ZenHub, Jira, Slack, Artifactory, Ansible, Terraform, ElasticSearch, Logstash, Kibana, LogEntries, NewRelic, Librato, UrbanCode Deploy, Vyatta, Citrix Netscaler, MongoDB, MySQL, PostgreSQL, Redis, VMware, VirtualBox, Wireshark, \LaTeX}
+\sectionsep
+
+%--------------------------------------------------------------
+%     Education
+%--------------------------------------------------------------
 \section{Education}
-\begin{entrylist}
-  \entry
-    {2010 - 2015}
-    {The Pennsylvania State University \hfill \hfill State College, PA}
-    {\\BS in Computer Science \\BS in Information Sciences and Technology}
-    {\textbf{GPA} 3.38\\
-    \textbf{Dean's List:} Spring 2011, Spring 2014}
+% Put school first and degree second if your school is reputable
+\educationHeading{The Pennsylvania State University}{BS Computer Science | BS Information Science and Technology}{State College, PA}{2010 - 2015}
 
-\end{entrylist}
-
-\section{Experience}
-\begin{entrylist}
-  \entry
-    {08/17 - \\Present}
-    {IBM \hfill \hfill Durham, NC}
-    {\\Staff Software Engineer}
-    {A member of the Whitewater SRE team. Our goal is to bring world class developer tools to IBM developers such as GitHub Enterprise and TravisCI Enterprise. My responsibilities include:\\
-    - Collaborating with GitHub and TravisCI support teams to investigate \\software issues\\
-    - Hosting and maintaining a highly available resilient environment for GitHub Enterprise and TravisCI\\
-    - Develop automation to manage the infrastructure\\
-    - Coaching developers on how to adopt developer tools\\
-    - Speaking at internal developer CodeRetreats within IBM\\}
-  \entry
-    {09/15 - 07/17}
-    {IBM \hfill \hfill Durham, NC}
-    {\\Software Engineer}
-    {A member of the DevOps Transformation Team. Our goal was to help \\developers adopt the DevOps culture by hosting a centralized offering of \\DevOps tools for developers to use. My responsibilities included:\\
-    - Supporting applications such as Jenkins, Artifactory and UrbanCode as \\cloud services\\
-    - Designing and implementing a highly available network architecture to \\support cloud based tooling\\
-    - Develop automation to maintain network configurations\\
-    - Organizing developer workshops to teach programmers how to develop code with the DevOps mentality\\}
-  \entry
-    {05/14 - 08/14}
-    {General Motors Company \hfill \hfill Lake Orion, MI}
-    {\\Orion Assembly IT Intern – Mobile Applications / SharePoint Developer}
-    {As an intern, I worked with plant managers on projects that helped improve processes within the manufacturing plant. I worked on two main projects which were to develop an android application as well as redesigning the \\internal SharePoint site. These projects included the following tasks:\\
-    - Collaborating with plant management to develop a proof of concept Android application written in Java to help audit data more efficiently\\
-    - Connecting the application to a MySQL database to create views for \\management to view tool data and forecast trends\\
-    - Collaborating with various teams across the plant to identify current \\document control processes and how they can be improved\\
-    - Designing a more user friendly internal SharePoint site for all plant personnel to use\\}
-
-\end{entrylist}
+\achievements{GPA:}{3.38}
+\achievements{Dean's List:}{Sprint 2011, Spring 2014}
+\sectionsep
 \end{document}
